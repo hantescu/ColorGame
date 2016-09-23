@@ -1,6 +1,9 @@
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 
+// maxim culori
+var maxColors = 4;
+
 function drawCircle(color){
 	ctx.clearRect(0, 0, myCanvas.width, myCanvas.height);
 	ctx.beginPath();
@@ -8,4 +11,8 @@ function drawCircle(color){
 	ctx.fillStyle = color;
 	ctx.fill();
 	ctx.stroke();
+}
+
+function generateRandomNumberUntilMax(){
+	return Math.floor(Math.random() * maxColors);  
 }
